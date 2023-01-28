@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Card, IconButton } from "@mui/material";
-import { ITrack } from "../types/tracks";
+import { ITrack } from "../types/track";
 import styles from "../styles/TrackItem.module.scss";
 import { Pause, PlayArrow, Delete } from "@mui/icons-material";
 import { useRouter } from "next/router";

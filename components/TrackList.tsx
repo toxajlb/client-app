@@ -1,5 +1,5 @@
 import { Box, Grid } from "@mui/material";
-import { ITrack } from "../types/tracks";
+import { ITrack } from "../types/track";
 import TrackItem from "./TrackItem";
 
 interface TrackListProps {

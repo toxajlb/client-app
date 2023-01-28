@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import React from 'react';
 import TrackList from '../../components/TrackList';
 import MainLayout from '../../layouts/MainLayout';
-import { ITrack } from '../../types/tracks';
+import { ITrack } from '../../types/track';
 
 export default function Index() {
     const router = useRouter();

@@ -1,10 +1,13 @@
 import { Button, Grid, TextField } from '@mui/material';
 import React, { useState } from 'react';
+import FileUpload from '../../components/FileUpload';
 import StepWrapper from '../../components/StepWrapper';
 import MainLayout from '../../layouts/MainLayout';
 
 export default function Create() {
     const [activeStep, setActiveStep] = useState(0);
+    const [picture, setPicture] = useState(null);
+    const [audio, setAudio] = useState(null);
 
     const back = () => {
         setActiveStep(prev => prev - 1);
@@ -36,6 +39,16 @@ export default function Create() {
                         rows={3}
                     />
                 </Grid>
+                }
+                {activeStep === 1 &&
+                <FileUpload setFile={setPicture} accept="image/*">
+                    <Button>Загрузить изображение</Button>
+                </FileUpload>
+                }
+                {activeStep === 2 &&
+                <FileUpload setFile={setAudio} accept="audio/*">
+                    <Button>Загрузить аудио</Button>
+                </FileUpload>
                 }
             </StepWrapper>
             <Grid container justifyContent='space-between'>
